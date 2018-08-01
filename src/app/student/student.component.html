@@ -1,8 +1,12 @@
 <div>
   <!-- Adicionando ? evita a quebra da aplicação caso o valor seja undefined -->
-  Student: {{ student?.name }}
+  Student: <a href="#" (click)="clicked()">{{ student?.name }}</a>
   <!-- [hidden] controla a visibilidade do componente via CSS -->
   <div *ngIf="student.isJedi">
     Jedi Template: {{student.temple}}
+    <!-- cria uma referencia nomeada description para o elemento -->
+    <textarea #description></textarea>
+    <!-- posso acessar propriedades e métodos do elemento através da referencia -->
+    <button (click)="description.focus()">Focus</button><br>
   </div>
 </div>
