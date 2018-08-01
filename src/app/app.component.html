@@ -1,2 +1,8 @@
 <jad-header></jad-header>
-<jad-student></jad-student>
+<!-- name="Luke" é passado como uma string-->
+<!-- [isJedi]="true" é um property bind mais avançado-->
+<!--
+   A propriedade [student] do component jad-student
+   irá receber o objeto criado no componente principal
+-->
+<jad-student *ngFor="let student of students" [student]="student"></jad-student>
