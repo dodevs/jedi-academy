@@ -18,4 +18,9 @@ export class StudentComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  clicked(): void {
+    // this é o elemento onde aconteceu o evento
+    console.log(`Student: ${this.student.name}`);
+  }
 }
