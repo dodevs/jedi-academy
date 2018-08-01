@@ -1,6 +1,8 @@
 <div>
-  Student: {{ name }}
-  <div [hidden]="!isJedi">
-    Jedi Template: Corouscant
+  <!-- Adicionando ? evita a quebra da aplicação caso o valor seja undefined -->
+  Student: {{ student?.name }}
+  <!-- [hidden] controla a visibilidade do componente via CSS -->
+  <div *ngIf="student.isJedi">
+    Jedi Template: {{student.temple}}
   </div>
 </div>
